@@ -1,5 +1,5 @@
-import { BookList } from './BookList'
 import { useRemoteService } from '../custom-hooks/useRemoteService'
+import { BookList } from './book-list/BookList'
 
 export const BookListContainer = () => {
   const { data, loading, error } = useRemoteService([])
