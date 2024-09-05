@@ -14,7 +14,7 @@ export const BookList = ({ books, loading, error }) => {
   return (
     <Box data-test="book-list" sx={{ flexGrow: 1, padding: 2 }}>
       <Grid container spacing={3}>
-        {books.map((book) => (
+        {books?.map((book) => (
           <Grid item xs={12} sm={6} md={4} key={book.id} className="book-item">
             <Card>
               <CardActionArea>
