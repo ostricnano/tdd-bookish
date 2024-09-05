@@ -1,5 +1,7 @@
+import { Route, Routes } from "react-router-dom";
 import { Typography } from "@mui/material";
-import { BookListContainer } from "./components/BookListContainer";
+import { BookListContainer } from "./components/book-list/BookListContainer";
+import { BookDetailsContainer } from "./components/book-detail/BookDetailsContainer";
 
 const App = () => {
   return (
@@ -8,6 +10,10 @@ const App = () => {
         Bookish
       </Typography>
       <BookListContainer />
+      <Routes>
+        <Route path="/books" element={<BookListContainer />} />
+        <Route path="/books/:id" element={<BookDetailsContainer />} />
+      </Routes>
     </div>
   );
 };
